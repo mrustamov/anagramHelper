@@ -9,19 +9,32 @@ body {
   font-family: Helvetica neue, roboto;
 }
 
+.container {
+  display: inline-block;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  /*border: 1px solid cyan;*/
+}
+
+.row {
+  float: left;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+}
+
+.inputtag {
+  margin: 5px;
+  margin-top: 1em;
+}
+
 h1 {
-  /*
-  color: #FFFFFF;
-  color: #bdbdbd;
-  */
+  position: relative;
   color: red;
   font-weight: 300;
 }
 
 .highlight {
-  /*
-  background-color: yellow;
-  color:red;
-  */
   color: #bdbdbd;
 }

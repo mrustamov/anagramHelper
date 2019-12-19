@@ -8,19 +8,34 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   </head>
   <body>
-    <div>
-      <form>
+    <div class="container">
+      <div class="row">
         <h1 id="demo"></h1>
-        <input type="text" id="inputWord" value="" oninput="getInputWord()" />
-        <br />
-        <h1></h1>
-        <input type="text" id="inputText" value="" oninput="highlight()" />
-        <br />
-        <h1></h1>
+      </div>
+      <div class="row">
+        <form>
+          <input
+            class="inputtag"
+            type="text"
+            id="inputWord"
+            value=""
+            oninput="getInputWord()"
+            autocomplete="off"
+          />
+          <br />
+          <input
+            class="inputtag"
+            type="text"
+            id="inputText"
+            value=""
+            oninput="highlight()"
+            autocomplete="off"
+          />
+        </form>
+      </div>
+      <div class="row">
         <h1 id="info"></h1>
-        <br />
-        <h1 id="effect"></h1>
-      </form>
+      </div>
     </div>
   </body>
   <script src="main.js"></script>
