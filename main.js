@@ -20,12 +20,15 @@ function printInfo() {
 function getRestOfLetters(str) {
   var regex = new RegExp(/(\w)(?![^<]*>|[^<>]*<\/)/, "g");
   var inputword_regex = str.match(regex);
-  return inputword_regex.join("");
+  if (inputword_regex) {
+    return inputword_regex.join("");
+  }
 }
 
 function highlight() {
   infoword = "";
   getInputWord();
+  //debugger;
   var lengthOfWord = document.getElementById("inputWord").value.length;
   console.log("Lengthofword " + lengthOfWord);
   match = 0;
@@ -61,17 +64,9 @@ function highlight() {
         re,
         "<span class='highlight'>" + inputText.charAt(i) + "</span>"
       );
-      console.log(
-        "rest of the letters after replace: " +
-          getRestOfLetters(inputword) +
-          "  and length: " +
-          getRestOfLetters(inputword).length
-      );
       printtheword();
       if (getRestOfLetters(inputword).length == 0) {
-        console.log(
-          "all letters are match" + getRestOfLetters(inputword).length
-        );
+        console.log("all letters are match");
         break;
       }
     } else {
@@ -88,3 +83,20 @@ function highlight() {
     }
   }
 }
+/*
+// Secpmd attampt to implement function
+
+var inputWord = document.getElementById("inputWord");
+if (inputWord) {
+  inputWord.addEventListener("input", onInputProcessor);
+}
+
+function onInputProcessor() {
+  document.getElementById("effect").innerHTML = getInputWordForProcessor();
+}
+
+function getInputWordForProcessor() {
+  var inputword = document.getElementById("inputWord").value;
+  return inputword;
+}
+*/
