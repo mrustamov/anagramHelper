@@ -73,6 +73,7 @@ function highlight() {
       }
     }
   }
+  printInfo();
 }
 /*
 var inputWord = document.getElementById("inputWord");
