@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Anagram Helper</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <h1 id="demo"></h1>
-      </div>
-      <div class="row">
-        <form>
-          <input
-            class="inputtag"
-            type="text"
-            id="inputWord"
-            value=""
-            oninput="getInputWord()"
-            autocomplete="off"
-          />
-          <br />
-          <input
-            class="inputtag"
-            type="text"
-            id="inputText"
-            value=""
-            oninput="highlight()"
-            autocomplete="off"
-          />
-        </form>
-      </div>
-      <div class="row">
-        <h1 id="info"></h1>
-      </div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Anagram Helper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center mt-5">
+      Anagram helper
+    </h1>
+    <div class="card mt-5">
+      <div class="card-body">Input word: <span id="demo"></span></div>
     </div>
-  </body>
-  <script src="main.js"></script>
+
+    <!-- Input row-->
+    <div class="row mt-5">
+      <div class="col">
+        <div class="input-group">
+          <div class="input-group-append input-group-prepend">
+            <span class="input-group-text">Input word here: </span>
+          </div>
+          <input class="form-control" type="text" id="inputWord" value="" oninput="getInputWord()" autocomplete="off" />
+        </div>
+        
+      </br>
+
+        <div class="input-group">
+          <div class="input-group-append input-group-prepend">
+            <span class="input-group-text">Anagram: </span>
+          </div>
+          <input class="form-control" type="text" id="inputText" value="" oninput="highlight()" autocomplete="off" />
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card mt-5">
+      <div class="card-body">Letters does not exits: <span id="info"></span></div>
+    </div>
+
+
+  </div>
+</body>
+<script src="main.js"></script>
+
 </html>
